@@ -33,19 +33,16 @@ function main()
 
 	if ${cli}
 	then
-		echo 1
 		scrape
 	fi
 
 	if ${file}
 	then
-		echo 2
 		scrape >> "${filename}"
 	fi		
 
 	if ${netcat}
 	then
-		echo 3
 		scrape | nc -q 1 ${host} ${port}
 	fi
 }
